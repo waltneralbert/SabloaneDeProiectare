@@ -11,5 +11,3 @@ public class Capitol {
 	
 
 }
-
-bla bla
