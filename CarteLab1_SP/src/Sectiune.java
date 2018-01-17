@@ -3,7 +3,7 @@ package Carte;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sectiune implements Element{
+public class Sectiune extends ObservableElement{
 	private String titlu;
 	private List<Element> continutSectiune = new ArrayList<Element>();
 	
@@ -14,6 +14,7 @@ public class Sectiune implements Element{
 	@Override
 	public void add(Element e) throws Exception {
 		continutSectiune.add(e);
+		this.myNotify();
 	}
 	@Override
 	public void remove(Element e) throws Exception {
@@ -36,8 +37,8 @@ public class Sectiune implements Element{
 		return this.continutSectiune;
 	}
 	
-public Element clone() {
-		
+	public Element clone() {
 		return this;
 	}
+	
 }

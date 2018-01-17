@@ -21,18 +21,17 @@ public class AbstractElement implements Element{
 
 	@Override
 	public String print() {
-		return "";
+		return "lalal";
 		
-	}
-	
-	public Element clone() {
-		
-		return this;
 	}
 
 	@Override
 	public void accept(Visitor v) {
 		
+	}
+	
+	public Element clone() {
+		return this;
 	}
 
 }

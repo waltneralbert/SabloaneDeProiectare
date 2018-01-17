@@ -1,6 +1,6 @@
 package Carte;
 
-public class Paragraf extends AbstractElement {
+public class Paragraf extends ObservableElement {
 	private String text;
 	
 	public Paragraf(String text) {
@@ -20,8 +20,13 @@ public class Paragraf extends AbstractElement {
 		v.visitParagraf(this);
 	}
 	
-public Element clone() {
-		
+	public Element clone() {
 		return this;
 	}
+	
+	public void changeText(String s) {
+		text = s;
+		this.myNotify();
+	}
+
 }

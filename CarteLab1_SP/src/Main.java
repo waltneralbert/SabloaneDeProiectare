@@ -41,19 +41,28 @@ public class Main {
 		sample.execute();
 		
 		Element book = DocumentManager.getInstance().getBook();
-		book.print();
-		System.out.println("Inainte de Delete: \n" + book.print());
+		System.out.println("Inainte de delete: \n" + book.print());
 		
 		Command delCommand = new DeleteCommand();
 		delCommand.execute();
 		
 		book = DocumentManager.getInstance().getBook();
-		System.out.println("Dupa Delete: \n" + book.print());
+		System.out.print("Dupa delete: \n " + book.print()+"\n");
 		
 		
 		//Command statCommand = new StatisticsCommand();
 		//statCommand.execute();
 		
+		ParagraphMonitor pm = new ParagraphMonitor();
+		Paragraf p1 = new Paragraf("Ceva pe-aici");
+		p1.attach(pm);
+		
+		p1.changeText("Altceva!");
+		pm.printChanges();
+		SectiuneMonitor sm = new SectiuneMonitor();
+		Sectiune s1 = new Sectiune("Titlul Sectiunii");
+		s1.attach(sm);
+		s1.add(p1);
 	}
 
 }

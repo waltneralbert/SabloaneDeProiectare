@@ -16,8 +16,7 @@ public class Tabel extends AbstractElement{
 		v.visitTabel(this);
 	}
 	
-public Element clone() {
-		
+	public Element clone() {
 		return this;
 	}
 

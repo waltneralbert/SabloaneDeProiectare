@@ -45,7 +45,7 @@ public class JSONBuilder implements Builder{
 		
 		Collection<HashMap<String, Object>> children = (Collection<HashMap<String, Object>>) map.get("children");
 		
-		children.forEach(null);
+		children.forEach();
 		return s;
 	}
 
