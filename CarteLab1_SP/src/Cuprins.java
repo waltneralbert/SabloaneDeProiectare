@@ -1,7 +1,8 @@
+package Carte;
 
 public class Cuprins {
-	public Cuprins (){
+	
+	public Cuprins() {
 		
 	}
-
 }

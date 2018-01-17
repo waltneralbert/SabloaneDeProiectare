@@ -1,8 +1,9 @@
+package Carte;
 
 public class Autor {
-	String nume;
-	public Autor (){
+	private String nume;
+	
+	public Autor() {
 		
 	}
-
 }

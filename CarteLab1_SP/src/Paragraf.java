@@ -1,15 +1,27 @@
+package Carte;
 
 public class Paragraf extends AbstractElement {
-	String text;
-	public Paragraf (String text){
+	private String text;
+	
+	public Paragraf(String text) {
 		this.text = text;
-		
 	}
 
-	public void print() {
-		System.out.println(this.text);
-		
-		
+	public String getText() {
+		return this.text;
 	}
 
+	public String print() {
+		return this.text;
+		
+	}
+	
+	public void accept(Visitor v) {
+		v.visitParagraf(this);
+	}
+	
+public Element clone() {
+		
+		return this;
+	}
 }

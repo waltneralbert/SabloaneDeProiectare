@@ -1,18 +1,22 @@
+package Carte;
 
-public class Imagine extends AbstractElement {
-	String nume_imagine;
-	public Imagine (String fileName){
-		nume_imagine = fileName;
+import java.awt.Image;
+
+public class Imagine extends AbstractElement{
+	private String pathImagine;
+	private Image data;
+	
+	public Imagine(String fileName) {
+		pathImagine = fileName;
+	}
+
+	public String print() {
+		return this.pathImagine;
 		
 	}
 	
-	public void print() {
-		System.out.println(this.nume_imagine);
-		
-		
+	public void accept(Visitor v) {
+		v.visitImage(this);
 	}
 
 }
-
-
-	

@@ -1,19 +1,21 @@
+package Carte;
 
 public class ImageProxy extends AbstractElement {
-	
 	private String fileName;
 	private Imagine realImage = null;
 	
-	public ImageProxy(String filename) {
-		this.fileName = filename;
+	public ImageProxy(String fileName) {
+		this.fileName = fileName;
 	}
 	
-	public void print() {
+	public String print() {
 		if(realImage == null) {
 			realImage = new Imagine(fileName);
-			
 		}
-		realImage.print();
+		return realImage.print();
 	}
-
+	
+	public void accept(Visitor v) {
+		v.visitImageProxy(this);
+	}
 }
